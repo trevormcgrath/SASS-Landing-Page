@@ -1,8 +1,0 @@
-/**** LESS Reset to remove all browser default styling ****/
-@import "reset.scss";
-/**** LESS Variable Imports ****/
-@import "variables.scss";
-
-body{
-	background-color: $back-color;
-}

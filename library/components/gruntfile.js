@@ -1,47 +1,58 @@
 module.exports = function(grunt) {
-
-
-}; //end exports
-
-/*
-  require('jit-grunt')(grunt);
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+grunt.loadNpmTasks('grunt-contrib-uglify');
+grunt.loadNpmTasks('grunt-contrib-watch');
+grunt.loadNpmTasks('grunt-contrib-compass');
+grunt.loadNpmTasks('grunt-contrib-sass');
 
   grunt.initConfig({
-    less: {
-      development: {
-        options: {
-          compress: true,
-          yuicompress: true,
-          optimization: 2
-        },
-        files: {
-          "css/LandingPageStyles.min.css": "css/main.less" // destination file and source file
-        }
-      }
-    },
     uglify: {
       options: {
         mangle:false //will change your variables, function names, etc into shortened versions if true
       },
       my_target: {
         files: {
-          'js/LandingPageScripts.min.js': ['js/main.js']
-        },
-      },
-    },
-    watch: {
-      styles: {
-        files: ['css/*.less','js/*.js'], // which files to watch
-        tasks: ['less','uglify'],
-        options: {
-          nospawn: true,
-          livereload:true
+          '../js/main.min.js': ['../js/main.js']
         }
       }
+    },
+    sass: {
+      dev: {
+        options: {
+          style: 'expanded'
+          //banner: '<%= tag.banner %>',
+          //compass: true
+        },
+        files: {
+          '../css/main.min.css': 'scss/*.scss' // destination file and source file
+        }
+      },
+      dist: {
+        options: {
+          style: 'compressed'
+          //compass: true
+        },
+        files: {
+          '../css/main.min.css': 'scss/*.scss' // destination file and source file
+        }
+      }
+    },
+    watch: {
+      options: { livereload:true },
+      scripts: {
+        files: ['../js/*.js'], // which files to watch
+        tasks: ['uglify']
+      },
+      sass: {
+        files: ['scss/*.scss'], // which files to watch
+        tasks: ['sass:dev']
+      },
+      html: {
+        files: ['../../*.html']
+      }
     }
-  });
 
-  //grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default', ['less','uglify', 'watch']);
-};*/
+  }); //end initConfig
+  
+
+  grunt.registerTask('default', ['watch']);
+}; //end exports
