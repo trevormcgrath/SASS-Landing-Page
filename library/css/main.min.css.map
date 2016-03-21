@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,4DAA4D;AAC5D,yBAAyB;AACzB,iCAAiC;AAGjC,IAAI;EACH,gBAAgB,ECLJ,IAAI",
-"sources": ["../components/scss/main.scss","../components/scss/variables.scss"],
-"names": [],
-"file": "main.min.css"
-}

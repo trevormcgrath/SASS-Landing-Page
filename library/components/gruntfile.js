@@ -1,8 +1,6 @@
 module.exports = function(grunt) {
-grunt.loadNpmTasks('grunt-contrib-uglify');
-grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-contrib-compass');
-grunt.loadNpmTasks('grunt-contrib-sass');
+
+require('jit-grunt')(grunt);
 
   grunt.initConfig({
     uglify: {
@@ -11,24 +9,27 @@ grunt.loadNpmTasks('grunt-contrib-sass');
       },
       my_target: {
         files: {
-          '../js/main.min.js': ['../js/main.js']
+          '../js/main.min.js': ['../js/main.js'] // destination file and source file
         }
       }
     },
     sass: {
       dev: {
         options: {
-          style: 'expanded'
-          //banner: '<%= tag.banner %>',
+          style: 'nested',
+          sourcemap: 'none',
+          noCache: true   
           //compass: true
         },
         files: {
-          '../css/main.min.css': 'scss/*.scss' // destination file and source file
+          '../css/main.min.css': 'scss/main.scss' // destination file and source file
         }
       },
       dist: {
         options: {
-          style: 'compressed'
+          style: 'compressed',
+          sourcemap: 'none',
+          noCache: true
           //compass: true
         },
         files: {
@@ -43,7 +44,7 @@ grunt.loadNpmTasks('grunt-contrib-sass');
         tasks: ['uglify']
       },
       sass: {
-        files: ['scss/*.scss'], // which files to watch
+        files: ['scss/**/*.scss'], // which files to watch
         tasks: ['sass:dev']
       },
       html: {
@@ -53,6 +54,5 @@ grunt.loadNpmTasks('grunt-contrib-sass');
 
   }); //end initConfig
   
-
   grunt.registerTask('default', ['watch']);
 }; //end exports

@@ -1,0 +1,5 @@
+@mixin rounded-corner($nav-btn) {
+    -moz-border-radius: $nav-btn;
+    -webkit-border-radius: $nav-btn;
+    border-radius: $nav-btn;  
+}

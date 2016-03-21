@@ -1,8 +1,45 @@
-/**** LESS Reset to remove all browser default styling ****/
-/*@import "reset.scss";*/
-/**** LESS Variable Imports ****/
-@import "variables.scss";
+/* BOURBON - A simple and lightweight mixin library for Sass.
+	Documentation: http://bourbon.io/docs/
+========================================================================== */
 
-body{
-	background-color: $back-color;
-}
+@import "plugins/bourbon/bourbon";
+@import "plugins/neat/neat";
+
+
+/* RESET - Default all browser default styles to these styles.
+========================================================================== */
+
+@import "_reset.scss";
+
+
+/* BASE - Base Variable files along with starting point Mixins and Placeholders 
+to be used throughout the site.
+========================================================================== */
+
+@import 'base/_variables.scss';
+@import 'base/_mixins.scss';
+@import 'base/_placeholders.scss';
+
+
+/* FRAMEWORK - Structure and layout files.
+========================================================================== */
+
+/*@import 'framework/_grid.scss';
+@import 'framework/_breakpoints.scss';
+@import 'framework/_layout.scss';*/
+
+
+/* MODULES - Re-usable site elements.
+========================================================================== */ 
+
+/*@import 'modules/_buttons.scss';
+@import 'modules/_lists.scss';
+@import 'modules/_tabs.scss';*/
+
+/* PARTS - Sections of the landing page.
+========================================================================== */ 
+
+@import 'parts/_nav.scss';
+@import 'parts/_header.scss';
+@import 'parts/_body.scss';
+@import 'parts/_footer.scss';
