@@ -1,3 +1,10 @@
+/*========================================================================== 
+
+			THE IMPORT PAGE
+			 – Everything SASS/SCSS imported here and compiled into CSS.
+
+========================================================================== */
+
 /* BOURBON - A simple and lightweight mixin library for Sass.
 	Documentation: http://bourbon.io/docs/
 ========================================================================== */
@@ -20,6 +27,16 @@ to be used throughout the site.
 @import 'base/_mixins.scss';
 @import 'base/_placeholders.scss';
 
+/* PARTS - Sections of the landing page.
+========================================================================== */ 
+
+/*@import 'parts/_nav-left.scss';*/
+@import 'parts/_body-styles.scss';
+@import 'parts/_nav-right.scss';
+@import 'parts/_header-styles.scss';
+
+
+/* Not being used in this project */
 
 /* FRAMEWORK - Structure and layout files.
 ========================================================================== */
@@ -35,11 +52,3 @@ to be used throughout the site.
 /*@import 'modules/_buttons.scss';
 @import 'modules/_lists.scss';
 @import 'modules/_tabs.scss';*/
-
-/* PARTS - Sections of the landing page.
-========================================================================== */ 
-
-@import 'parts/_nav.scss';
-@import 'parts/_header.scss';
-@import 'parts/_body.scss';
-@import 'parts/_footer.scss';

@@ -1,0 +1,13 @@
+body{
+
+}
+
+body p{
+	margin:12px 0;
+}
+
+.page-content{
+	position: relative;
+	z-index: -1;
+	@include transition();
+}
