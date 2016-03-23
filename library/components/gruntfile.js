@@ -10,8 +10,8 @@ require('jit-grunt')(grunt);
       my_target: {
         files: {
           '../js/main.min.js': ['../js/main.js'] // destination file and source file
-        }
-      }
+        },
+      },
     },
     sass: {
       dev: {
@@ -19,7 +19,6 @@ require('jit-grunt')(grunt);
           style: 'nested',
           sourcemap: 'none',
           noCache: true   
-          //compass: true
         },
         files: {
           '../css/main.min.css': 'scss/main.scss' // destination file and source file
@@ -30,12 +29,11 @@ require('jit-grunt')(grunt);
           style: 'compressed',
           sourcemap: 'none',
           noCache: true
-          //compass: true
         },
         files: {
-          '../css/main.min.css': 'scss/*.scss' // destination file and source file
-        }
-      }
+          '../css/main.min.css': 'scss/main.scss' // destination file and source file
+        },
+      },
     },
     watch: {
       options: { livereload:true },
