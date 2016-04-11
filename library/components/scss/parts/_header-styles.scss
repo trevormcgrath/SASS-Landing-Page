@@ -19,8 +19,8 @@ header{
 			display:none;
 			max-width: 100px;
 			opacity: .75;
-			top:65%;
-			left:45%;
+			top:34%;
+			left:41%;
 		}
 	}
 
@@ -34,6 +34,28 @@ header{
 				display: block;
 				margin: 0 auto;
 			}
+		}
+	}
+	@media screen and (min-width:800px){
+		.header-content{
+			img{
+				top:40%;
+				left:44%;
+			}
+		}
+	}
+
+	@media screen and (min-width:1000px){
+		.header-content{
+			img{
+				top:45%;
+				left:47%;
+			}
+		}
+	}
+	@media screen and (min-width:0px) and (max-width:655px){
+		img{
+			display: none!important;
 		}
 	}
 }

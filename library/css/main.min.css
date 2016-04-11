@@ -107,6 +107,9 @@ h3{font-size: @h3/1.55;font-weight:200;}
 */
 /* PARTS - Sections of the landing page.
 ========================================================================== */
+.page-wrap {
+  height: 0; }
+
 body p {
   margin: 12px 0; }
 
@@ -116,6 +119,25 @@ body p {
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s; }
+
+.center {
+  text-align: center; }
+
+.emphThis {
+  color: #4D8FC3;
+  text-transform: uppercase;
+  font-weight: 800; }
+
+.emphThis-2 {
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 800; }
+
+.leadText {
+  border-bottom: 1px solid #4D8FC3; }
+
+.bigger {
+  font-weight: 800; }
 
 .sidenav {
   position: fixed;
@@ -183,8 +205,8 @@ header .header-content img {
   display: none;
   max-width: 100px;
   opacity: .75;
-  top: 65%;
-  left: 45%; }
+  top: 34%;
+  left: 41%; }
 @media screen and (min-width: 656px) {
   header .header-content h1 {
     font-size: 3em;
@@ -192,10 +214,57 @@ header .header-content img {
   header .header-content img {
     display: block;
     margin: 0 auto; } }
+@media screen and (min-width: 800px) {
+  header .header-content img {
+    top: 40%;
+    left: 44%; } }
+@media screen and (min-width: 1000px) {
+  header .header-content img {
+    top: 45%;
+    left: 47%; } }
+@media screen and (min-width: 0px) and (max-width: 655px) {
+  header img {
+    display: none !important; } }
 
 video {
   width: 100%;
   top: 0; }
+
+#section-about {
+  background-color: #555;
+  color: #FFF;
+  padding: 20px; }
+  #section-about h2 {
+    font-weight: 200;
+    font-size: 1.75em;
+    margin-bottom: 15px; }
+  #section-about p {
+    margin: 0;
+    font-weight: 100;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: .9em; }
+  #section-about a, #section-about a:visited {
+    color: #FFF; }
+  #section-about img {
+    display: block;
+    margin: 0 auto; }
+  #section-about a:hover {
+    border-bottom: 3px solid #4D8FC3; }
+  @media screen and (min-width: 656px) {
+    #section-about h2 {
+      max-width: 600px;
+      display: block;
+      margin: 0 auto; }
+    #section-about p {
+      font-size: 1.2em;
+      max-width: 620px;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 35px; } }
+
+#three-column-section {
+  background-color: #4D8FC3; }
 
 /* Not being used in this project */
 /* FRAMEWORK - Structure and layout files.

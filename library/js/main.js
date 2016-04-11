@@ -5,7 +5,10 @@ $( document ).ready(function() {
 	console.log(size);
 
     $('#fadeIn1').hide(0).fadeIn(1000);
-    $('#fadeIn2').hide(0).delay(1000).fadeIn(1000);
+
+    if(size>656){
+    	$('#fadeIn2').hide(0).delay(1000).fadeIn(1000);
+    }
 
 
 });

@@ -1,0 +1,52 @@
+#section-about{
+
+	background-color:#555;
+	color:$white;
+	
+	padding:20px;
+
+	h2{
+		font-weight:200;
+		font-size: 1.75em;
+		margin-bottom:15px;
+	}
+
+	p{
+		margin:0;
+		font-weight: 100;
+		margin-bottom: 25px;
+		text-align: center;
+		font-size: .9em;
+	}
+
+	a, a:visited{
+		color:$white;
+
+	}
+
+	img{
+		display: block;
+		margin:0 auto;
+	}
+
+	a:hover{
+		border-bottom:3px solid #4D8FC3;
+	}
+
+	@media screen and (min-width:656px){
+		
+		h2{
+			max-width:600px;
+			display: block;
+			margin:0 auto;
+		}
+		p{
+			font-size:1.2em;
+			max-width:620px;
+			display: block;
+			margin:0 auto;
+			margin-bottom: 35px;
+		}
+	}
+
+}
