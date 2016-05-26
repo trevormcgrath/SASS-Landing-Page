@@ -293,9 +293,9 @@ video {
     padding-top: 12px;
     min-height: 55px; }
 
-@media screen and (min-width: 656px) {
+@media screen and (min-width: 750px) {
   #three-column-section {
-    padding: 0; }
+    padding: 0 5%; }
     #three-column-section .column-section {
       width: 31.333333%;
       float: left;
