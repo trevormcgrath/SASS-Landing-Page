@@ -139,6 +139,14 @@ body p {
 .bigger {
   font-weight: 800; }
 
+.clear {
+  clear: both; }
+
+h2 {
+  font-weight: 200;
+  font-size: 1.75em;
+  margin-bottom: 15px; }
+
 .sidenav {
   position: fixed;
   top: 0px;
@@ -205,7 +213,7 @@ header .header-content img {
   display: none;
   max-width: 100px;
   opacity: .75;
-  top: 34%;
+  top: 290px;
   left: 41%; }
 @media screen and (min-width: 656px) {
   header .header-content h1 {
@@ -216,11 +224,15 @@ header .header-content img {
     margin: 0 auto; } }
 @media screen and (min-width: 800px) {
   header .header-content img {
-    top: 40%;
+    top: 350px;
     left: 44%; } }
 @media screen and (min-width: 1000px) {
   header .header-content img {
-    top: 45%;
+    top: 475px;
+    left: 47%; } }
+@media screen and (min-width: 1500px) {
+  header .header-content img {
+    top: 600px;
     left: 47%; } }
 @media screen and (min-width: 0px) and (max-width: 655px) {
   header img {
@@ -234,10 +246,6 @@ video {
   background-color: #555;
   color: #FFF;
   padding: 20px; }
-  #section-about h2 {
-    font-weight: 200;
-    font-size: 1.75em;
-    margin-bottom: 15px; }
   #section-about p {
     margin: 0;
     font-weight: 100;
@@ -264,16 +272,55 @@ video {
       margin-bottom: 35px; } }
 
 #three-column-section {
-  background-color: #4D8FC3; }
+  background-color: rgba(77, 143, 195, 0.75);
+  padding: 20px; }
 
-/* Not being used in this project */
-/* FRAMEWORK - Structure and layout files.
-========================================================================== */
-/*@import 'framework/_grid.scss';
-@import 'framework/_breakpoints.scss';
-@import 'framework/_layout.scss';*/
-/* MODULES - Re-usable site elements.
-========================================================================== */
-/*@import 'modules/_buttons.scss';
-@import 'modules/_lists.scss';
-@import 'modules/_tabs.scss';*/
+.columns-container {
+  display: block;
+  margin: 0 auto;
+  max-width: 1400px; }
+
+.column-section {
+  margin-bottom: 25px; }
+  .column-section a, .column-section a:visited {
+    color: inherit; }
+  .column-section a:hover {
+    border-bottom: 2px solid #000; }
+  .column-section figure img {
+    float: left;
+    margin-right: 15px; }
+  .column-section h3 {
+    padding-top: 12px;
+    min-height: 55px; }
+
+@media screen and (min-width: 656px) {
+  #three-column-section {
+    padding: 0; }
+    #three-column-section .column-section {
+      width: 31.333333%;
+      float: left;
+      margin: 0 1%; } }
+#image-hover-section {
+  background-color: rgba(85, 85, 85, 0.2); }
+  #image-hover-section h2 {
+    text-align: center; }
+  #image-hover-section p {
+    margin: 12px 20px; }
+  #image-hover-section .sub-text {
+    font-size: .85em;
+    font-style: italic; }
+    #image-hover-section .sub-text a, #image-hover-section .sub-text a:visited {
+      color: #4D8FC3; }
+    #image-hover-section .sub-text a:hover {
+      border-bottom: 2px solid #4D8FC3; }
+
+.grid {
+  display: block;
+  margin: 0 auto;
+  max-width: 1400px; }
+  .grid figure {
+    float: left;
+    overflow: hidden;
+    width: 96%;
+    margin-left: 0 2%;
+    max-width: 450px; }

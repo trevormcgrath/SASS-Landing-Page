@@ -1,0 +1,44 @@
+#image-hover-section{
+    background-color:rgba(85,85,85,.2);
+    h2{
+        text-align: center;
+    }
+    p{
+        margin:12px 20px;
+    }
+    .sub-text{
+        font-size: .85em;
+        font-style: italic;
+        
+        a, a:visited{
+            color:$sky-color;
+        }
+        a:hover{
+            border-bottom: 2px solid $sky-color;
+        }    
+    }
+}
+
+.grid{
+    display:block;
+    margin:0 auto;
+    max-width:1400px;
+
+    
+    figure{
+            float: left;
+            overflow: hidden;
+            width:96%;
+            margin-left:0 2%;
+            max-width:450px;
+
+        img{
+
+        }
+    }
+}
+
+
+@media screen and (min-width:656px){
+
+}
